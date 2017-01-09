@@ -4,5 +4,5 @@
 
 ```sh
 $ cd watson-advisor
-$ node speech2translator.js
+$ node speechConversation.js
 ```
