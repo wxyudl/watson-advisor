@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 var watson = watson || require('watson-developer-cloud');
 let conversationObj = {};
 let conversation = watson.conversation({
@@ -31,4 +32,4 @@ function conversationFn(msg, callback){
 
 module.exports = {
   conversation: conversationFn
-}
+};

@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 let fs = require('fs');
 let http = require('http');
 let chokidar = require("chokidar");

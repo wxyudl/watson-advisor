@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 var watson = watson || require('watson-developer-cloud');
 
 let languageTranslator = watson.language_translator({
@@ -13,7 +14,7 @@ function translator(text, callback){
     text: text,
   }, function(err, translation) {
     if (err){
-      console.log(err)
+      console.log(err);
     }else{
       callback(translation.translations[0].translation);
     }
@@ -22,4 +23,4 @@ function translator(text, callback){
 
 module.exports = {
   translator: translator
-}
+};

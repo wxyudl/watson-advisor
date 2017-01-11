@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 let SpeechToTextV1 = require('watson-developer-cloud/speech-to-text/v1');
 let Mic = require('node-microphone');
 let mic = new Mic();
@@ -17,4 +18,4 @@ let speechToTextStream = speechToText.createRecognizeStream({
 let speechToTextPipe = micStream.pipe(speechToTextStream);
 module.exports = {
   stream: speechToTextPipe
-}
+};

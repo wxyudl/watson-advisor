@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 let speechToTextStream = require('../speech2text.js');
 let languageTranslator = require('../languageTranslator.js');
 let conversation = require('../conversation.js');
