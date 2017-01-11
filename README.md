@@ -4,9 +4,9 @@
 
 > **使用到的Watson APIs:**
 
-> - Speech to Text http://www.ibm.com/watson/developercloud/speech-to-text.html.
-> - Language Translator http://www.ibm.com/watson/developercloud/language-translator.html.
-> - Conversation http://www.ibm.com/watson/developercloud/conversation.html.
+> - Speech to Text (语音转文字) http://www.ibm.com/watson/developercloud/speech-to-text.html.
+> - Language Translator（翻译） http://www.ibm.com/watson/developercloud/language-translator.html.
+> - Conversation（对话） http://www.ibm.com/watson/developercloud/conversation.html.
 
 例子：
 ```sh
