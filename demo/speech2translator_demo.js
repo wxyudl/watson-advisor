@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
 let speechToTextStream = require('../speech2text.js');
 let languageTranslator = require('../languageTranslator.js');
+// let languageTranslator = require('../baiduLanguageTranslator.js');
 let through2 = require('through2');
 let ws = require("nodejs-websocket");
 let text = '';
