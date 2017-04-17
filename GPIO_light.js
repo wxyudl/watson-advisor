@@ -1,5 +1,7 @@
 var wpi = require('wiring-pi');
-
+var modeKey = {
+    mode: "off"
+};
 wpi.setup('gpio');
 // flow light gpio
 wpi.pinMode(0, wpi.OUTPUT);
@@ -42,22 +44,22 @@ function breathLED(rPwm, gPwm, bPwm) {
     wpi.pwmWrite(18, bPwm);
 }
 
-wpi.pinMode(8, wpi.INPUT);
-var keyBuf1 = 1;
-var keyBackUp1 = 1;
+//wpi.pinMode(8, wpi.INPUT);
+//var keyBuf1 = 1;
+//var keyBackUp1 = 1;
 
-wpi.pinMode(9, wpi.INPUT);
-var keyBuf2 = 1;
-var keyBackUp2 = 1;
+//wpi.pinMode(9, wpi.INPUT);
+//var keyBuf2 = 1;
+//var keyBackUp2 = 1;
 
-wpi.pinMode(10, wpi.INPUT);
-var keyBuf3 = 1;
-var keyBackUp3 = 1;
+//wpi.pinMode(10, wpi.INPUT);
+//var keyBuf3 = 1;
+//var keyBackUp3 = 1;
 
-wpi.pinMode(11, wpi.INPUT);
-var keyBuf4 = 1;
-var keyBackUp4 = 1;
-
+//wpi.pinMode(11, wpi.INPUT);
+//var keyBuf4 = 1;
+//var keyBackUp4 = 1;
+/*
 let keyDownNum = 0;
 
 function testKey1() {
@@ -118,7 +120,7 @@ function testKey4() {
 
 function getKeyDownNum() {
     return keyDownNum;
-}
+}*/
 
 // flowCount: blinking clock count
 var blinkCount = 0;
@@ -272,7 +274,7 @@ function breathLight(onOffBoolean, timeOut) {
     }
 }*/
 
-
+/*
 function initKey() {
     setInterval(function() {
         testKey1();
@@ -280,18 +282,17 @@ function initKey() {
         testKey3();
         testKey4();
     }, 1);
-}
+}*/
 
-
-function ctlLED(period, mode) {
-    var lit = setInterval(function() {
+function initLED(period) {
+    setInterval(function() {
         if (blinkCount > 7) {
             blinkCount = 0;
         } else {
             blinkCount++;
         }
 
-        switch (mode) {
+        switch (modeKey.mode) {
             case "flow":
                 flowLight(blinkCount);
                 break;
@@ -307,7 +308,10 @@ function ctlLED(period, mode) {
         }
     }, period);
     
-    return lit;
+    
+//    setTimeout(function(){
+//        modeKey.mode = 'flow';
+//    }, 2000);
 }
 
 function startBreathLED(period) {
@@ -328,7 +332,7 @@ function startBreathLED(period) {
     }, period);
 }
 module.exports = {
-    initKey: initKey,
-    ctlLED: ctlLED,
+    modeKey: modeKey,
+    initLED: initLED,
     startBreathLED: startBreathLED
 };

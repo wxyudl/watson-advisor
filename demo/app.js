@@ -3,11 +3,15 @@ let GPIO = require('../GPIO_light.js');
 
 //visualRecognition.analysis();
 //GPIO.initKey();
-var aa = GPIO.ctlLED(100, "flow");
+GPIO.initLED(300);
+GPIO.modeKey.mode = 'flow';
 
 setTimeout(function(){
-    clearInterval(aa);
-    GPIO.ctlLED(100, "blink");
+    GPIO.modeKey.mode = 'blink';
 }, 3000);
+
+setTimeout(function(){
+    GPIO.modeKey.mode = 'toggle';
+}, 6000);
 
 GPIO.startBreathLED(10);
