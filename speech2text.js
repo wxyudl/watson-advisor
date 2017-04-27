@@ -12,10 +12,9 @@ let speechToText = new SpeechToTextV1({
 console.log('Start speech to text.');
 
 let speechToTextStream = speechToText.createRecognizeStream({
-    //model: 'zh-CN_BroadbandModel',
     model: 'en-US_BroadbandModel',
-    Content_type: 'audio/wav; rate=16000; channels=1',
-    continuous: true
+    content_type: 'audio/wav; rate=16000; channels=1',
+    continuous: true,
 });
 
 let speechToTextPipe = micStream.pipe(speechToTextStream);

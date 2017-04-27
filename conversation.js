@@ -12,7 +12,7 @@ let conversation = watson.conversation({
 conversationObj.context = {};
 
 function conversationFn(msg, callback){
-    console.log('Start Conversation');
+    //console.log('Start Conversation');
     
     conversation.message({
         workspace_id: '9d2b65b3-9658-4b64-a89f-58436b442a8b',
@@ -21,9 +21,9 @@ function conversationFn(msg, callback){
         },
         context: conversationObj.context
     }, function(err, response) {
-        console.log('===============');
-        console.log(response);
-        console.log('===============');
+        //console.log('===============');
+        //console.log(response);
+        //console.log('===============');
         if (err){
             _msg = 'error:' + err;
             _entity = ''
@@ -35,7 +35,8 @@ function conversationFn(msg, callback){
         }
 
         conversationObj.context = response.context;
-        console.log('End Conversation');
+      //console.log('End Conversation');
+        console.log('=================================================================================');
         
         callback(_msg, _node, _entity);
     });

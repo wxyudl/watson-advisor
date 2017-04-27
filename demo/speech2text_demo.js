@@ -13,7 +13,7 @@ let stream = through2({ objectMode: true }, function(chunk, enc, callback) {
 
 stream.on('data', function(data) {
     text += data.join(' ');
-    console.log(text);
+    console.log(data);
 });
 
 speechToTextStream.stream.pipe(stream);

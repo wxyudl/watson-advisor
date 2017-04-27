@@ -10,8 +10,8 @@ var text_to_speech = new TextToSpeechV1 ({
     password: 'tCb5nnQ7vQnV'
 });
 
-function runSpeech(text){
-    console.log('Start text to speech.');
+function runSpeech(text, callback){
+    //console.log('Start text to speech.');
     isSpeaking.status = true;
     
     var params = {
@@ -21,11 +21,13 @@ function runSpeech(text){
     };
 
     text_to_speech.synthesize(params, function(){
-        console.log('End text to speech.');
-        
         exec("aplay _out.wav", function (error, stdout, stderr) {
+            //console.log('End text to speech.');
             isSpeaking.status = false;
+            callback && callback();
         });
+        
+        //callback && callback();
     }).on('error', function(error) {
         console.log('Error:', error);
     }).pipe(fs.createWriteStream('_out.wav'));
@@ -33,5 +35,5 @@ function runSpeech(text){
 
 module.exports = {
     runSpeech: runSpeech,
-    isSpeaking: isSpeaking.status
+    isSpeaking: isSpeaking
 };

@@ -34,7 +34,7 @@ function analysis(callback) {
                 if (err) {
                     console.log(err);
                 } else {
-                    callback(JSON.stringify(res, null, 2));
+                    callback(res);
                 }
             });
         }

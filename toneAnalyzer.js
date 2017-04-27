@@ -12,7 +12,7 @@ function toneAnalyzerFn(text, callback){
         if (err){
             console.log(err);
         }else{
-            callback(JSON.stringify(tone, null, 2));
+            callback(tone);
         }
 
     });  
