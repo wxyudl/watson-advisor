@@ -8,12 +8,7 @@
         '#dsgb#'
     ];
     const SHORTCUTS_MAPS = {
-        '#csa#': 'https://csa.dst.ibm.com/sales/console/',
-        '#dsc#': 'dsc@us.ibm.com',
-        '#slack#': 'https://ibm-dbg.slack.com/',
-        '#verse#': 'https://mail.notes.na.collabserv.com/livemail',
-        '#webex#': 'https://ibm.webex.com',
-        '#dsgb#': 'http://mtev2.w3-969.ibm.com/dsgb/'
+        '#csa#': 'https://www.baidu.com/',
     }
     'use stract';
     function Watson(ws){
