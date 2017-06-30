@@ -1,0 +1,112 @@
+body{
+    background: url(./avatar_hero.svg) no-repeat #562f72 right bottom;
+}
+
+#top{
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #c5c5c5;
+    font-weight: bold;
+}
+
+#chat{
+    width: 400px;
+    margin: 0 auto;
+    background-color: rgba(238, 238, 238, 0.9);
+}
+
+#main{
+    height: 500px;
+    overflow-y: scroll;
+}
+
+#input{
+    border-top: 1px solid #c5c5c5;
+    height: 70px;
+    width: 100%;
+}
+
+#input textarea{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+}
+
+#main .message{
+    clear: both;
+    margin: .5rem;
+    overflow: hidden;
+    word-break: break-word;
+    position: relative;
+    padding-top: 20px;
+}
+
+#main .message span{
+    display: inline-block;
+    background-color: #b2e281;
+    padding: 5px 7px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+#main .message span.left{
+    float: left;
+    background-color: #4DD0E1;
+}
+
+#main .message span.right{
+    float: right;
+}
+
+#live{
+    position: fixed;
+    width: 150px;
+    right: 0;
+    bottom: 0;
+}
+
+#live video{
+    width: 100%;
+}
+
+#main .message .toolbar{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    opacity: .6;
+    padding: 0;
+    display: none;
+}
+
+#main .message .toolbar:hover{
+    opacity: 1;
+}
+
+#main .message .toolbar.translate{
+    background: url(./translate.svg) no-repeat;
+    background-size: 18px;
+}
+
+#main .message .toolbar.speech{
+    background: url(./speak.svg) no-repeat;
+    background-size: 18px;
+}
+
+#main .message .left~.toolbar{
+    top: 0px;
+    left: 0;
+}
+
+#main .message .left~.toolbar.speech{
+    left: 18px;
+}
+
+#main .message .right~.toolbar.translate{
+    right: 18px;
+}
+
+#main .message .right~.toolbar{
+    top: 0px;
+    right: 0;
+}

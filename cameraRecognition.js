@@ -13,7 +13,7 @@ let takePic = "raspistill -w 300 -h 300 -t 2 -o sample.jpg";
 let fs = require('fs');
 
 let visual_recognition = watson.visual_recognition({
-    api_key: '55c85a4304deb5441e8518a9d0225f7e77809940',
+    api_key: 'b6c9eaec4f1a331526564bf555c7031298ace7ae',
     version: 'v3',
     version_date: '2016-05-20'
 });

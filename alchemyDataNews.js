@@ -9,9 +9,9 @@ function alchemyDataNewsFn(start, title, callback){
     var params = {
         start: start,
         end: 'now',
-        count: 2,
+        count: 5,
         'q.enriched.url.enrichedTitle.entities.entity': '|text='+ title +'|',
-        'return': 'enriched.url.text,enriched.url.url,enriched.url.publicationDate'
+        'return': 'enriched.url.title,enriched.url.text,enriched.url.url,enriched.url.publicationDate'
     };
 
     alchemy_data_news.getNews(params, function (err, news) {
