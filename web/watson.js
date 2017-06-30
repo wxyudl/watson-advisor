@@ -1,4 +1,5 @@
 ;(function(){
+    'use stract';
     const SHORTCUTS = [
         '#csa#',
         '#dsc#',
@@ -10,7 +11,6 @@
     const SHORTCUTS_MAPS = {
         '#csa#': 'https://www.baidu.com/',
     }
-    'use stract';
     function Watson(ws){
         var _this = this;
         this.cameraStream = null;
